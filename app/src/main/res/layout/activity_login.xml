@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="登录头条，体验更多功能"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <!--手机号或者邮箱-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_user"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/user"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/iv_user"
+            android:background="@null"
+            android:ems="19"
+            android:hint="Please fill in your email"
+            android:maxLines="1"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <!--密码-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/showPwdBtn"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/password_hide" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/showPwdBtn"
+            android:background="@null"
+            android:ems="19"
+            android:hint="Please fill in your password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:text="登录"
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
