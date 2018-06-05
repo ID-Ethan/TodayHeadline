@@ -54,6 +54,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if (v == showPwdBtnRe) {
             // Handle clicks for showPwdBtnRe
+            showOrHidePwd();
         } else if (v == registerBtn) {
             // Handle clicks for registerBtn
             String username = etUsernameRe.getText().toString();

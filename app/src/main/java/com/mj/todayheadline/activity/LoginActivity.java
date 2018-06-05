@@ -135,17 +135,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         //显示进度条
         pbLogin.setVisibility(View.VISIBLE);
         dbHelper = new DBHelper(this);
+        //不管是否选中了记住密码，都要求传入isLogin = true;
+        editor.putBoolean("isLogin", true);
         if (dbHelper.login(username, password)) {
             if (cbRememberPwd.isChecked()) {    //记住密码已经选中
                 editor.putString("username", username);
                 editor.putString("password", password);
                 editor.putBoolean("cbRememberPwd", true);
-                editor.commit();
+//                editor.commit();
                 if (cbAutoLogin.isChecked()) {  //自动登录已经选中
                     editor.putBoolean("cbAutoLogin", true);
-                    editor.commit();
+//                    editor.commit();
                 }
             }
+            editor.commit();    //提交
             Toast.makeText(LoginActivity.this, "登录成功！", Toast.LENGTH_SHORT).show();
             //跳转
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
