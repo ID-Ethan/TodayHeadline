@@ -84,6 +84,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
+
     /*显示和隐藏密码*/
     private void showOrHidePwd() {
         if (isPasswordHide) {   //显示密码
